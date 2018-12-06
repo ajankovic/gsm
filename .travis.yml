@@ -13,13 +13,8 @@ git:
   # Only clone the most recent commit.
   depth: 1
 
-# Skip the install step. Don't `go get` dependencies. Only build with the code
-# in vendor/
-install: true
-
-# Don't email me the results of the test runs.
 notifications:
   email: true
 
 script:
-  - go test -v
+  - go test -v ./...
